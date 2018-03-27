@@ -28,7 +28,7 @@
                   <form>
                       <ul>
                         <li> <%= f.input :email, required: true, autofocus: true, label: false, placeholder:"e-mail", input_html: { style: "border-radius: 0; height: 43px; border-bottom: 2px solid #eaeaea; padding: 6px 21px; font-size: 15px; color: #a9a9a9; font-style: italic;" } %></li>
-                        <li> <%= f.input :password, required: true, label: false, hint: ("#{@minimum_password_length} characters minimum" if @minimum_password_length), placeholder:"mot de passe", input_html: { style: "border-radius: 0; height: 43px; border-bottom: 2px solid #eaeaea; padding: 6px 21px; font-size: 15px; color: #a9a9a9; font-style: italic;" } %> </li>
+                        <li> <%= f.input :password, required: true, label: false, hint: ("#{@minimum_password_length} characters minimum" if @minimum_password_length), placeholder:"mot de passe", input_html: { style: "border-radius: 0; height: 43px; border-bottom: 2px solid #eaeaea; padding: 6px 21px; font-size: 15px; color: #a9a9a9; font-style: italic; padding-bottom: 10px;" } %> </li>
                         <li> <%= f.input :password_confirmation, required: true, label: false, placeholder:"confirmez votre mot de passe", input_html: { style: "border-radius: 0; height: 43px; border-bottom: 2px solid #eaeaea; padding: 6px 21px; font-size: 15px; color: #a9a9a9; font-style: italic;" }  %> </li>
                       </ul>
                     <div class="form-actions">
@@ -42,7 +42,7 @@
                     <li class="wm-twitter-color"><a href="#"><i class="wmicon-social4"></i> twitter</a></li>
                     <li class="wm-googleplus-color"><a href="#"><i class="fa fa-google-plus-square"></i> Google+</a></li>
                 </ul>
-                <p>Déjà membre? <a <%= link_to "Connectez-vous", "#login", "data-toggle" => "modal", style:"text-decoration: none" %></a></p>
+                <p>Déjà membre? <a <%= link_to "Connectez-vous", "#login", "data-toggle" => "modal", style:"text-decoration: none", "data-dismiss" => "modal", "aria-hidden" => "true" %></a></p>
 
             </div>
 
