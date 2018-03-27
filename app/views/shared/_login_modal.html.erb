@@ -1,29 +1,51 @@
-<!-- Modal -->
-<div class="modal fade" id="login" tabindex="-1" role="dialog" aria-labelledby="loginLabel">
-  <div class="modal-dialog" role="document">
-    <div class="modal-content">
-      <div class="modal-header">
-        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
-        <h4 class="modal-title" id="loginLabel">Log in</h4>
-      </div>
-      <div class="modal-body">
-        <%= simple_form_for(resource, as: resource_name, url: session_path(resource_name)) do |f| %>
-          <div class="form-inputs">
-            <%= f.input :email, required: false, autofocus: true %>
-            <%= f.input :password, required: false %>
-            <%= f.input :remember_me, as: :boolean if devise_mapping.rememberable? %>
-          </div>
 
-          <div class="form-actions">
-            <%= f.button :submit, "Log in" %>
+
+
+<div class="modal fade" id="login" tabindex="-1" role="dialog">
+      <div class="modal-dialog" role="document">
+        <div class="modal-content">
+          <div class="modal-body">
+
+            <div class="wm-modallogin-form wm-login-popup">
+                <span class="wm-color">Login to Your Account</span>
+                <form>
+                    <ul>
+                        <li> <input type="text" value="Your Username" onblur="if(this.value == '') { this.value ='Your Username'; }" onfocus="if(this.value =='Your Username') { this.value = ''; }"> </li>
+                        <li> <input type="password" value="password" onblur="if(this.value == '') { this.value ='password'; }" onfocus="if(this.value =='password') { this.value = ''; }"> </li>
+                        <li> <a href="#" class="wm-forgot-btn">Forgot Password?</a> </li>
+                        <li> <input type="submit" value="Sign In"> </li>
+                    </ul>
+                </form>
+                <span class="wm-color">or try our socials</span>
+                <ul class="wm-login-social-media">
+                    <li><a href="#"><i class="wmicon-social5"></i> Facebook</a></li>
+                    <li class="wm-twitter-color"><a href="#"><i class="wmicon-social4"></i> twitter</a></li>
+                    <li class="wm-googleplus-color"><a href="#"><i class="fa fa-google-plus-square"></i> Google+</a></li>
+                </ul>
+                <p>Not a member yet? <a href="#">Sign-up Now!</a></p>
+            </div>
+            <div class="wm-modallogin-form wm-register-popup">
+                <span class="wm-color">create Your Account today</span>
+                <form>
+                    <ul>
+                        <li> <input type="text" value="Your Username" onblur="if(this.value == '') { this.value ='Your Username'; }" onfocus="if(this.value =='Your Username') { this.value = ''; }"> </li>
+                        <li> <input type="text" value="Your E-mail" onblur="if(this.value == '') { this.value ='Your E-mail'; }" onfocus="if(this.value =='Your E-mail') { this.value = ''; }"> </li>
+                        <li> <input type="password" value="password" onblur="if(this.value == '') { this.value ='password'; }" onfocus="if(this.value =='password') { this.value = ''; }"> </li>
+                        <li> <input type="text" value="Confirm Password" onblur="if(this.value == '') { this.value ='Confirm Password'; }" onfocus="if(this.value =='Confirm Password') { this.value = ''; }"> </li>
+                        <li> <input type="submit" value="Create Account"> </li>
+                    </ul>
+                </form>
+                <span class="wm-color">or signup with your socials:</span>
+                <ul class="wm-login-social-media">
+                    <li><a href="#"><i class="wmicon-social5"></i> Facebook</a></li>
+                    <li class="wm-twitter-color"><a href="#"><i class="wmicon-social4"></i> twitter</a></li>
+                    <li class="wm-googleplus-color"><a href="#"><i class="fa fa-google-plus-square"></i> Google+</a></li>
+                </ul>
+                <p>Already a member? <a href="#">Sign-in Here!</a></p>
+            </div>
+
           </div>
-        <% end %>
-      </div>
-      <div class="modal-footer">
-        <%= render "devise/shared/links" %>
-        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
-        <button type="button" class="btn btn-primary">Save changes</button>
+        </div>
+      <div class="clearfix"></div>
       </div>
     </div>
-  </div>
-</div>
