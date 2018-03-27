@@ -1,0 +1,54 @@
+<!-- <h2>Sign up</h2>
+
+<%= simple_form_for(resource, as: resource_name, url: registration_path(resource_name)) do |f| %>
+  <%= f.error_notification %>
+
+  <div class="form-inputs">
+    <%= f.input :email, required: true, autofocus: true %>
+    <%= f.input :password, required: true, hint: ("#{@minimum_password_length} characters minimum" if @minimum_password_length) %>
+    <%= f.input :password_confirmation, required: true %>
+  </div>
+
+  <div class="form-actions">
+    <%= f.button :submit, "Sign up" %>
+  </div>
+<% end %>
+
+<%= render "devise/shared/links" %>
+ -->
+
+<div class="modal fade" id="sign_up" tabindex="-1" role="dialog">
+      <div class="modal-dialog" role="document">
+        <div class="modal-content">
+          <div class="modal-body">
+
+            <div class="wm-modallogin-form wm-login-popup">
+                <span class="wm-color">Inscrivez-vous</span>
+                <%= simple_form_for(resource, as: resource_name, url: registration_path(resource_name)) do |f| %>
+                  <form>
+                      <ul>
+                        <li> <%= f.input :email, required: true, autofocus: true, label: false, placeholder:"e-mail", input_html: { style: "border-radius: 0; height: 43px; border-bottom: 2px solid #eaeaea; padding: 6px 21px; font-size: 15px; color: #a9a9a9; font-style: italic;" } %></li>
+                        <li> <%= f.input :password, required: true, label: false, hint: ("#{@minimum_password_length} characters minimum" if @minimum_password_length), placeholder:"mot de passe", input_html: { style: "border-radius: 0; height: 43px; border-bottom: 2px solid #eaeaea; padding: 6px 21px; font-size: 15px; color: #a9a9a9; font-style: italic;" } %> </li>
+                        <li> <%= f.input :password_confirmation, required: true, label: false, placeholder:"confirmez votre mot de passe", input_html: { style: "border-radius: 0; height: 43px; border-bottom: 2px solid #eaeaea; padding: 6px 21px; font-size: 15px; color: #a9a9a9; font-style: italic;" }  %> </li>
+                      </ul>
+                    <div class="form-actions">
+                      <%= f.button :submit, "S'inscrire", style: "border-radius: 0px"  %>
+                    </div>
+                  </form>
+                <% end %>
+                <span class="wm-color">Suivez-nous sur les réseaux sociaux</span>
+                <ul class="wm-login-social-media">
+                    <li><a href="#"><i class="wmicon-social5"></i> Facebook</a></li>
+                    <li class="wm-twitter-color"><a href="#"><i class="wmicon-social4"></i> twitter</a></li>
+                    <li class="wm-googleplus-color"><a href="#"><i class="fa fa-google-plus-square"></i> Google+</a></li>
+                </ul>
+                <p>Déjà membre? <a <%= link_to "Connectez-vous", "#login", "data-toggle" => "modal", style:"text-decoration: none" %></a></p>
+
+            </div>
+
+
+          </div>
+        </div>
+      <div class="clearfix"></div>
+      </div>
+    </div>

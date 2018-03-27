@@ -41,7 +41,7 @@
                       <ul>
                         <li> <%= f.input :email, required: true, autofocus: true, label: false, placeholder:"e-mail", input_html: { style: "border-radius: 0; height: 43px; border-bottom: 2px solid #eaeaea; padding: 6px 21px; font-size: 15px; color: #a9a9a9; font-style: italic;" } %></li>
                         <li> <%= f.input :password, required: true, label: false, placeholder:"mot de passe",input_html: { style: "border-radius: 0; height: 43px; border-bottom: 2px solid #eaeaea; padding: 6px 21px; font-size: 15px; color: #a9a9a9; font-style: italic;" }  %></li>
-                        <li> <%= link_to "Forgot your password?", new_password_path(resource_name), class:"wm-forgot-btn", input_html: { style: "text-decoration: none" } %> </li>
+                        <li> <%= link_to "Mot de passe oublié ?", new_password_path(resource_name), class:"wm-forgot-btn", input_html: { style: "text-decoration: none" } %> </li>
                       </ul>
                     <div class="form-actions">
                       <%= f.button :submit, "Se Connecter", style: "border-radius: 0px"  %>
@@ -54,7 +54,8 @@
                     <li class="wm-twitter-color"><a href="#"><i class="wmicon-social4"></i> twitter</a></li>
                     <li class="wm-googleplus-color"><a href="#"><i class="fa fa-google-plus-square"></i> Google+</a></li>
                 </ul>
-                <p>Pas encore membre? <a href="#"><%= link_to "Sign up", new_registration_path(resource_name) %><br /></a></p>
+                <p>Pas encore membre? <a <%= link_to "Inscrivez-vous", "#sign_up", "data-toggle" => "modal", style:"text-decoration: none" %> </a></p>
+
             </div>
 
 
