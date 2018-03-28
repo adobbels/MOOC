@@ -17,3 +17,49 @@
 <% end %>
 
 <%= render "devise/shared/links" %>
+
+
+<div class="wm-main-section wm-contact-full">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-md-12">
+                            <div class="wm-contact-tab">
+                              <!-- Tab panes -->
+                              <div class="tab-content">
+                                <div class="tab-pane active" id="home">
+                                    <div class="row">
+                                        <div class="col-md-4"> <div class="wm-map"> <div id="map"></div> </div> </div>
+                                        <div class="col-md-8">
+                                            <div class="wm-contact-form">
+                                                <span>Changez votre mot de passe</span>
+                                                <form>
+                                                    <ul>
+                                                        <li>
+                                                            <i class="wmicon-black"></i>
+                                                            <input type="text" value="Name" onblur="if(this.value == '') { this.value ='Name'; }" onfocus="if(this.value =='Name') { this.value = ''; }">
+                                                        </li>
+                                                        <li>
+                                                            <i class="wmicon-symbol3"></i>
+                                                            <input type="text" value="E-mail" onblur="if(this.value == '') { this.value ='E-mail'; }" onfocus="if(this.value =='E-mail') { this.value = ''; }">
+                                                        </li>
+                                                        <li>
+                                                            <i class="wmicon-technology4"></i>
+                                                            <input type="text" value="Phone" onblur="if(this.value == '') { this.value ='Phone'; }" onfocus="if(this.value =='Phone') { this.value = ''; }">
+                                                        </li>
+                                                        <li>
+                                                            <i class="wmicon-web2"></i>
+                                                            <textarea placeholder="Message"></textarea>
+                                                        </li>
+                                                        <li> <input type="submit" value="Send Message"> </li>
+                                                    </ul>
+                                                </form>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                              </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+</div>
