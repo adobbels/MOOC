@@ -14,9 +14,10 @@ gem 'turbolinks'
 gem 'underscore-rails'
 gem 'gmaps4rails'
 gem 'coffee-rails'
+gem 'bootstrap-sass', '~> 3.3'
+gem 'popper_js', '~> 1.12.9'
 
 gem 'autoprefixer-rails'
-gem 'bootstrap-sass', '~> 3.3'
 gem 'font-awesome-sass', '~> 4.7'
 gem 'sass-rails'
 gem 'simple_form'
@@ -33,4 +34,6 @@ group :development, :test do
   gem 'listen', '~> 3.0.5'
   gem 'spring'
   gem 'spring-watcher-listen', '~> 2.0.0'
+  gem "better_errors"
+  gem "binding_of_caller"
 end

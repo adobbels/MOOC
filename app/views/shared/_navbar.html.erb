@@ -10,9 +10,15 @@
             <li><i class="wmicon-clock2"></i> Mon - fri: 7:00am - 6:00pm</li>
           </ul>
           <ul class="wm-adminuser-section">
-            <li>
-              <%= link_to 'Login', new_user_session_path %>
-            </li>
+            <% if current_user %>
+              <li>
+                <%= link_to 'Déconnexion', destroy_user_session_path, :method => 'delete' %>
+              </li>
+            <% else %>
+              <li>
+                <%= link_to "Se connecter", "#login", "data-toggle" => "modal", style:"text-decoration: none" %>
+              </li>
+            <% end %>
             <li>
               <a href="#">Contact</a>
             </li>
@@ -122,3 +128,6 @@
   </div>
 <!--// MainHeader \\-->
 </header>
+
+
+
