@@ -453,7 +453,8 @@ address { font-style: italic; }
 .wm-register-popup,.wm-login-toggle .wm-login-popup { display: none; }
 .wm-login-toggle .wm-register-popup { display: block; }
 /* Navigation */
-.navbar {
+/* there was a conflict with boostrap .nav class*/
+.navbartheme {
     background: none;
     border: none;
     float: left;
@@ -709,7 +710,7 @@ address { font-style: italic; }
 }
 .left-modalbox .modal-content                   { float: left; }
 .wm-header-three .wm-logo                       { margin: 20px 0px 22px; }
-.wm-header-three .navbar                        { padding-right: 47px; }
+.wm-header-three .navbartheme                        { padding-right: 47px; }
 .wm-header-three .navbar-nav > li               { padding: 0px 20px; }
 .wm-header-three .wm-topstrip                   { background-color: #ffffff; }
 .wm-header-three .navbar-nav > li > a {
